@@ -57,7 +57,7 @@ public class Main {
 	 * actions available at those locations.
 	 */
 	private static final byte[] AVAIL_ACTIONS = {
-		ACTION_DOWN|ACTION_RIGHT,			ACTION_LEFT|ACTION_DOWN|ACTION_RIGHT,			ACTION_LEFT|ACTION_DOWN,
+		ACTION_DOWN| ACTION_RIGHT,			ACTION_LEFT|ACTION_DOWN|ACTION_RIGHT,			ACTION_LEFT|ACTION_DOWN,
 		ACTION_UP|ACTION_DOWN|ACTION_RIGHT,		ACTION_LEFT|ACTION_UP|ACTION_DOWN|ACTION_RIGHT,		ACTION_LEFT|ACTION_UP|ACTION_DOWN,
 		ACTION_UP|ACTION_RIGHT,				ACTION_LEFT|ACTION_UP|ACTION_RIGHT,				ACTION_LEFT|ACTION_UP
 	};
@@ -122,11 +122,10 @@ public class Main {
 			if (puzzle[j] == 0) {
 				continue;
 			}
-
 			cumulativeDistance += MANHATTAN_DIST[j][puzzle[j]];
 		}
 
-		return cumulativeDistance;
+		return cumulativeDistance; 
 	};
 
 	/**
@@ -600,7 +599,8 @@ public class Main {
 			return Arrays.equals(PUZZLE, n.PUZZLE);
 		}
 
-		/**
+		
+		/*
 		 * Generates a collection of successors from this state.
 		 *
 		 * @return the child successors from this state
